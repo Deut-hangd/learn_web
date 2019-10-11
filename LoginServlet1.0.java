@@ -3,7 +3,7 @@ import javax.servlet.http.*;
 import java.io.*;
 public class LoginServlet extends HttpServlet {
     public void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException,IOException{
-        response.setContentType("text/html;charset=gb2312");
+        response.setContentType("text/html;charset=UTF-8");
         PrintWriter pw = response.getWriter();
         pw.println("<html>");
         pw.println("<body>");
@@ -14,6 +14,7 @@ public class LoginServlet extends HttpServlet {
         pw.println("用户名:<input type=text name=username><br>");
         pw.println("<br>");
         pw.println("密  码:<input type=password name=password><br>");
+        pw.println("<input type=checkbox name=keep>两周内免登录<br>");
         pw.println("<input type=submit value=登录><br>");
         pw.println("</form>");
         pw.println("</body>");
